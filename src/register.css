@@ -1,0 +1,73 @@
+.form-container {
+    background-color: #a7bcff;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.form-container .form-wrapper {
+    background-color: white;
+    padding: 20px 60px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+.form-container .form-wrapper .logo {
+    color: #5d5b8d;
+    font-weight: bold;
+    font-size: 24px;
+}
+.form-container .form-wrapper .title {
+    color: #5d5b8d;
+    font-size: 12px;
+}
+.form-container .form-wrapper form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.form-container .form-wrapper form input {
+    padding: 15px;
+    border: none;
+    width: 250px;
+    border-bottom: 1px solid #a7bcff;
+}
+.form-container .form-wrapper form input::placeholder {
+    color: #afafaf;
+}
+.form-container .form-wrapper form button {
+    background-color: #7b96ec;
+    color: white;
+    padding: 10px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+}
+.form-container .form-wrapper form label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #8da4f1;
+    font-size: 12px;
+    cursor: pointer;
+}
+.form-container .form-wrapper form label img {
+    width: 32px;
+}
+.form-container .form-wrapper p {
+    color: #5d5b8d;
+    font-size: 12px;
+    margin-top: 10px;
+}
+.button-delete-modal {
+    color: 'red';
+  }
+
+  /* .ant-layout-sider{
+    width: 220px ;
+    min-width: 220px;
+    max-width: 220px;
+    flex: 0 0 220px;
+  } */

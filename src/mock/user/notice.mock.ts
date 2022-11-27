@@ -1,0 +1,102 @@
+import { Notice } from '@/interface/layout/notice.interface';
+import { intercepter, mock } from '../config';
+
+const mockNoticeList: Notice<'all'>[] = [
+  {
+    id: '000000001',
+    avatar: 'https://gw.alipayobjects.com/zos/rmsportal/ThXAXghbEsBCCSDihZxY.png',
+    title: 'cảng báo đăng nhập',
+    datetime: '2017-08-09',
+    type: 'notification',
+  },
+  {
+    id: '000000002',
+    avatar: 'https://gw.alipayobjects.com/zos/rmsportal/OKJXDXrmkNshAMvwtvhu.png',
+    title: 'thông báo từ người dùng',
+    datetime: '2017-08-08',
+    type: 'notification',
+  },
+  {
+    id: '000000003',
+    avatar: 'https://gw.alipayobjects.com/zos/rmsportal/kISTdvpyTAhtGxpovNWd.png',
+    title: 'Thêm lớp thành công',
+    datetime: '2017-08-07',
+    read: true,
+    type: 'notification',
+  },
+  {
+    id: '000000004',
+    avatar: 'https://gw.alipayobjects.com/zos/rmsportal/GvqBnKhFgObvnSGkDsje.png',
+    title: 'Đề xuất cho bạn',
+    datetime: '2017-08-07',
+    type: 'notification',
+  },
+  {
+    id: '000000005',
+    avatar: 'https://gw.alipayobjects.com/zos/rmsportal/ThXAXghbEsBCCSDihZxY.png',
+    title: 'cảnh báo đăng nhập',
+    datetime: '2017-08-07',
+    type: 'notification',
+  },
+  {
+    id: '000000006',
+    avatar: 'https://gw.alipayobjects.com/zos/rmsportal/fcHMVNCjPOsbUGdEduuv.jpeg',
+    title: 'Hello',
+    description: 'xin chào tôi đến từ ...',
+    datetime: '2017-08-07',
+    type: 'message',
+    clickClose: true,
+  },
+  {
+    id: '000000007',
+    avatar: 'https://gw.alipayobjects.com/zos/rmsportal/fcHMVNCjPOsbUGdEduuv.jpeg',
+    title: 'Hello',
+    description: 'xin chào tôi đến từ ...',
+    datetime: '2017-08-07',
+    type: 'message',
+    clickClose: true,
+  },
+  {
+    id: '000000008',
+    avatar: 'https://gw.alipayobjects.com/zos/rmsportal/fcHMVNCjPOsbUGdEduuv.jpeg',
+    title: 'Hello',
+    description: 'xin chào tôi đến từ ...',
+    datetime: '2017-08-07',
+    type: 'message',
+    clickClose: true,
+  },
+  {
+    id: '000000009',
+    title: 'Hello',
+    description: 'xin chào tôi đến từ ...',
+    extra: 'thư chào',
+    status: 'todo',
+    type: 'event',
+  },
+  {
+    id: '000000010',
+    title: 'Hello',
+    description: 'xin chào tôi đến từ ...',
+    extra: 'sự kiện',
+    status: 'urgent',
+    type: 'event',
+  },
+  {
+    id: '000000011',
+    title: 'Hello',
+    description: 'xin chào tôi đến từ ...',
+    extra: 'sự kiện',
+    status: 'doing',
+    type: 'event',
+  },
+  {
+    id: '000000012',
+    title: 'Hello',
+    description: 'xin chào tôi đến từ ...',
+    extra: 'sự kiện',
+    status: 'processing',
+    type: 'event',
+  },
+];
+
+mock.mock('/user/notice', 'get', intercepter(mockNoticeList));
